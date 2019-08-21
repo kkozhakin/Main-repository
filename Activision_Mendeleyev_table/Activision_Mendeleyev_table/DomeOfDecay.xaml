@@ -1,0 +1,59 @@
+﻿<Window x:Class="Activision_Mendeleyev_table.DomeOfDecay"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wfi="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+        mc:Ignorable="d"
+        Icon="icon.jpeg"
+        Title="Купол распада" Height="465" Width="557" WindowStartupLocation="CenterScreen" MinHeight="465" MinWidth="557" Closing="Window_Closing"  SizeChanged="Window_SizeChanged" SourceInitialized="Window_SourceInitialized">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <Menu Grid.Row="0">
+            <MenuItem Header="Графическое меню">
+                <MenuItem Header="Настройка цвета">
+                    <MenuItem Header="Теория" />
+                    <MenuItem Header="Эксперимент" />
+                </MenuItem>
+                <MenuItem Header="Настройка границ">
+                    <MenuItem Header="Верхняя температура" />
+                    <MenuItem Header="Нижняя температура"  />
+                </MenuItem>
+                <MenuItem Header="Эксперимент точками" IsCheckable="True" IsChecked="True"/>
+            </MenuItem>
+            <MenuItem Header="Настройка данных" Click="DateSettings_Click" />
+        </Menu>
+        <wfi:WindowsFormsHost Name="host" Grid.Column="0" Grid.Row="1"/>
+        <DataGrid Name="Points" Grid.Column="1" Grid.Row="1" AutoGenerateColumns="False" CanUserReorderColumns="False" CanUserSortColumns="False" CanUserResizeRows="False" CanUserResizeColumns="False" CanUserAddRows="True" CanUserDeleteRows="True" ColumnWidth="*" CellEditEnding="Points_CellEditEnding">
+        </DataGrid>
+        <Button Name="Build" Grid.Column="0" Grid.Row="2" Content="Построить купол" HorizontalAlignment="Left" VerticalAlignment="Center" Width="150" Height="35" RenderTransformOrigin="0.5,0.5" Click="Build_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="20"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Name="Save" Grid.Column="0" Grid.Row="2" Content="Сохранить данные" HorizontalAlignment="Right" VerticalAlignment="Center" Height="35" Width="150" Click="Save_Click"/>
+        <Button Name="Load" Grid.Column="1" Grid.Row="2" Content="Загрузить данные" HorizontalAlignment="Right" VerticalAlignment="Center" Width="150" Height="35" RenderTransformOrigin="0.5,0.5" Click="Load_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-20"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+    </Grid>
+</Window>
