@@ -1,2 +1,1 @@
-# hse
 Assembler projects
