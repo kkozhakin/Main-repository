@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Редактирование места</title>
+
+<!-- Bootstrap core CSS -->
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="../bootstrap/js/mapbasics.js" type="text/javascript"></script>
+<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../bootstrap/css/main.css" rel="stylesheet">
+<link href="../bootstrap/css/font-awesome.min.css" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="../bootstrap/css/signin.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><h1>FotograFF</h1></a>
+    </div>
+    <!--/.nav-collapse -->
+    </div>
+    </div>
+<CENTER> <h1> Редактирование места </h1> </CENTER>
+<div class="container">
+<div class="row">
+<div class="col-md-6">
+  <form name="form">
+
+           <label>Введите название места: <br>
+                <input type="text" name="name" required size="39" maxlength="25">
+           </label><br><br>
+
+           <label>Введи описание места:<br>
+            <textarea name="comment" cols="40" rows="10" ></textarea>
+            </label>
+            <br><br>
+
+            <label>Фото места:<br>
+                </label>
+            <img src="">
+            <br>
+            <input type="file" name="photo" multiple accept="image/*,image/jpeg">
+
+</div>
+<div class="col-md-6">
+  <div id="mape" style="height: 450px;"><label>Карта</label></div><br><br>
+           <label>Введите длину: <br>
+                <input type="text" name="name" required size="30" maxlength="25">
+           </label>
+           <label>Введите долготу: <br>
+                <input type="text" name="name" required size="30" maxlength="25">
+           </label><br><br>
+            <input type="submit" value="Изменить"><br><br>
+            <div style="max-width: 8em; min-height: 2em; margin-left: auto; margin-right: -3em; margin-bottom:20px;">
+                <input type="submit" value="Сохранить"></div>
+</form>
+</div>
+</div>
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <p> FotograFF @2017
+            </p>
+        </div>
+    </div>
+    </div>
+
+<!— jQuery (necessary for Bootstrap's JavaScript plugins) —>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/j.."></script>
+<!— Include all compiled plugins (below), or include individual files as needed —>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

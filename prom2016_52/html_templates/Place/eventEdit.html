@@ -1,0 +1,28 @@
+{% from "_formhelpers.html" import render_field_alter_small %}
+<div class="row">
+    <div class="large-7 large-offset-4 columns">
+        <div class="float-center">
+            <form action="" method="post" >
+                {{form.hidden_tag()}}
+                <div class="row">
+                    <div class="col-sm-3">
+                        <img class="img-thumbnail" alt="avatar" width="400px"
+                        src={{avatar}}>
+		                <div class="row"><input type=submit class="warning button" value="Загрузить изображение"></div>
+                    </div>
+                </div>
+                <p>&nbsp</p>
+                <div class ="row">
+                    {{ render_field_alter_small(form.name, "Новое Имя:", "medium-6 columns", placeholder="Новое название:",value = name )}}
+                </div>
+                <div class ="row">
+                    {{ render_field_alter_small(form.desc, "Новое описание:", "medium-6 columns", placeholder="Описание:", value = text) }}
+                </div>
+                <input hidden="true" value={{ id }}> </input>
+                <p>
+                    <button type="success submit" class="button">Сохранить изменения</button>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>

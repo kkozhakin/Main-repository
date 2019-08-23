@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+    <div class="container">
+        <center><h3>Бурано</h3></center>
+        <div class="row">
+            <div class="col-sm-3">
+                <img class="img-thumbnail" alt="avatar" width="400px"
+                     src="http://italia-ru.com/files/canal_grande_panorama_at_sunset_venice_italy.jpg">
+            </div>
+            <div class="col-sm-9">
+                <label>Живописный островной квартал Бурано в северной лагуне итальянского города Венеция по праву можно назвать одним из самих красочных мест планеты Земля. Кроме искусных мастеров по производству кружев, он славится своими яркими разноцветными зданиями. Интересно, что за каждой постройкой закреплен определенный цвет, разрешение на который домовладельцы получают от местных властей. За состоянием мультяшных домов и насыщенностью оттенка тщательно следят, в случае необходимости освежая утраченную яркость их облика. Согласно легенде, именно яркие цвета фасадов издревле указывали буранским рыбакам путь домой.</label>
+            </div>
+        </div>
+        <div class="row"  style="margin-top: 15px; margin-bottom: 15px;">
+            <div class="col-sm-6">
+                <div id="map" style="width: 100%; height: 400px"></div>
+            </div>
+            <div class="col-xs-6">
+                <form style="margin-bottom: 20px;">
+                    <textarea class="form-control" rows="3" placeholder="Paste your comment here"></textarea>
+                    <div class="form-inline">
+                        <input type="button" class="btn btn-default" value="Выбрать файл" onclick=""/>
+                        <input type="text" class="form-control disabled" placeholder="file name">
+                        <input type="button" class="btn btn-default" value="Отправить" id="submit" onclick="javascript:document.location.href='https://www.yandex.ru/'"/>
+                    </div>
+                </form>
+                <div class="panel panel-warning">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">User написал 2 часа назад</h3>
+                    </div>
+                    <div class="panel-body">
+                        «Забавная вещь, этот ваш бутстрап»
+                    </div>
+                </div>
+                <div class="panel panel-warning">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">User написал 2 часа назад</h3>
+                    </div>
+                    <div class="panel-body">
+                        «Забавная вещь, этот ваш бутстрап»
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-mod-2">
+                &nbsp;
+            </div>
+        </div>
+    </div>
+
+     <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        ymaps.ready(init);
+        var myMap;
+
+        function init(){
+            myMap = new ymaps.Map("map", {
+                center: [55.76, 37.64],
+                zoom: 7
+            });
+        }
+    </script>
+</body>
+  </html>

@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Fotograff - Главная</title>
+{% endblock %}
+
+{% block content %}
+
+<div id="hello">
+    <div class="container">
+        <div class="row">
+            <img class="img-responsive center-block" src="{{ url_for('static', filename='logotipe.png') }}" alt="">
+        </div><!-- /row -->
+    </div>  <!-- /container -->
+</div><!-- /hello -->
+
+<div id="green">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 centered">
+                <img src="{{ url_for('static', filename='iphone.png') }}" alt="">
+            </div>
+
+            <div class="col-lg-7 centered">
+                <h3>Быстро. Удобно. Понятно.</h3>
+                <p>Вам скучно и одиноко? Наш сайт поможет исправить это обстоятельство! Выполняйте предложенный, создавайте собственные квесты. Количество заданий на карте ограничено одной только фантазией пользователей!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row centered mt grid">
+        <h3>ЛУЧШИЕ ПУБЛИКАЦИИ</h3>
+        <div class="mt"></div>
+        <div class="col-lg-4">
+            <a href="#win1"><img width="300px" height="300px" src="{{ url_for('static', filename='01.jpg') }}" alt=""></a>
+        </div>
+        <div class="col-lg-4">
+            <a href="#win2"><img width="300px" height="300px" src="{{ url_for('static', filename='02.jpg') }}" alt=""></a>
+        </div>
+        <div class="col-lg-4">
+            <a href="#win3"><img width="300px" height="300px" src="{{ url_for('static', filename='03.jpg') }}" alt=""></a>
+        </div>
+    </div>
+
+    <div class="row centered mt grid">
+        <div class="mt"></div>
+        <div class="col-lg-4">
+            <a href="#win4"><img width="300px" height="300px" src="{{ url_for('static', filename='04.jpg') }}" alt=""></a>
+        </div>
+        <div class="col-lg-4">
+            <a href="#win5"><img width="300px" height="300px" src="{{ url_for('static', filename='05.jpg') }}" alt=""></a>
+        </div>
+        <div class="col-lg-4">
+            <a href="#win6"><img width="300px" height="300px" src="{{ url_for('static', filename='06.jpg') }}" alt=""></a>
+        </div>
+    </div>
+
+    {% if not loggedin %}
+    <div class="row mt centered">
+        <div class="col-lg-7 col-lg-offset-1 mt">
+                <p class="lead">Интерактивная карта мест, банк заданий, взаимодействие с другими пользователями. Все это и даже больше ждет вас на Fotograff! Зарегистрируйтесь для получения доступа к полному функционалу!</p>
+
+        </div>
+
+        <div class="col-lg-3 mt">
+            <p>
+                <a href="/register">
+                    <button type="button" class="btn btn-theme btn-lg">
+                        Регистрация
+                    </button>
+                </a>
+            </p>
+        </div>
+    </div>
+    {% else %}
+    <div class="row mt centered" style="margin-bottom: 5%;">
+        <p class="lead"></p>
+    </div>
+    {% endif %}
+</div>
+<section id="contact"></section>
+
+<a href="#x" class="overlay" id="win1"></a>
+        <div class="popup">
+               <a href="{{ url_for('static', filename='01.jpg') }}">
+                   <img class="is-image" title="" src="{{ url_for('static', filename='01.jpg') }}" alt="" />
+               </a>
+        </div>
+<a href="#x" class="overlay" id="win2"></a>
+        <div class="popup">
+               <a href="{{ url_for('static', filename='02.jpg') }}">
+                   <img class="is-image" title="" src="{{ url_for('static', filename='02.jpg') }}" alt="" />
+               </a>
+        </div>
+<a href="#x" class="overlay" id="win3"></a>
+        <div class="popup">
+               <a href="{{ url_for('static', filename='03.jpg') }}">
+                   <img class="is-image" title="" src="{{ url_for('static', filename='03.jpg') }}" alt="" />
+               </a>
+        </div>
+<a href="#x" class="overlay" id="win4"></a>
+        <div class="popup">
+               <a href="{{ url_for('static', filename='04.jpg') }}">
+                   <img class="is-image" title="" src="{{ url_for('static', filename='04.jpg') }}" alt="" />
+               </a>
+        </div>
+<a href="#x" class="overlay" id="win5"></a>
+        <div class="popup">
+               <a href="{{ url_for('static', filename='05.jpg') }}">
+                   <img class="is-image" title="" src="{{ url_for('static', filename='05.jpg') }}" alt="" />
+               </a>
+        </div>
+<a href="#x" class="overlay" id="win6"></a>
+        <div class="popup">
+               <a href="{{ url_for('static', filename='06.jpg') }}">
+                   <img class="is-image" title="" src="{{ url_for('static', filename='06.jpg') }}" alt="" />
+               </a>
+        </div>
+{% endblock %}

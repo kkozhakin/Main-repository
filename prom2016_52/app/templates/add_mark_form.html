@@ -1,0 +1,27 @@
+{% from "_formhelpers.html" import render_field_alter_small %}
+
+<form onsubmit="submitAddMarkForm(); return false;">
+    <div class="col-md-3">
+
+        <div class="row">
+            <label> Название {{form.name }}</label>
+        </div>
+
+        <div class="row"><div class="col-md-3">
+            <label> Город {{ render_field_alter_small(form.city,value = city )}}</label>
+        </div></div>
+
+        <div class="row"><div class="col-md-3">
+            <label> Адрес {{ render_field_alter_small(form.adr,value = adress ) }}</label>
+        </div></div>
+
+        <div class="row">
+            <label> Описание {{ form.desc }}  </label>
+        </div>
+
+        <div class="row">
+            <input type="submit" class="warning button" value="Добавить" >
+        </div>
+
+    </div>
+</form>

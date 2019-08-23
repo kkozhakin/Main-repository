@@ -1,0 +1,11 @@
+{% extends "error.html" %}
+
+{% block error_details %}
+<div style="text-align: center;">
+    <h3>Ой! Кажется такой страницы не существует...</h3>
+    <div class="text-center">
+        <img class="img-rounded" src="{{ url_for('static', filename='404.png') }}">
+    </div>
+    <p>Ничего страшного, вы можете вернуться на <a href="/">главную</a> страницу сайта.</p>
+</div>
+{% endblock %}

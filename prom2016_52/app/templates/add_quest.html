@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Fotograff - Добавление квеста пользователя {{ username }}</title>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-4" id="quest_image">
+        <center><img src="{{fileurl}}" style="margin-top: 15%; width: 250px; height:250px;"></center>
+    </div>
+
+    <div class="col-md-6" >
+        <form class="form-signin" action="" method="post" name="add_quest">
+            {{form1.hidden_tag()}}
+            <div style="text-align: center;"><h2>Создание квеста</h2></div>
+            <input placeholder="Введите название квеста:" name="nameq"
+                   id="nameq" type="text" class="form-control"><p></p>
+            <input placeholder="Описание:" name="text"
+                   id="text" type="text" class="form-control"><p></p>
+            <p> Выберите сложность:
+            <input id="complexity-0" name="complexity" type="radio" value="1" style="margin-left:5px;">
+                <label for="complexity-0" style="margin-right:5px;">1</label>
+
+            <input id="complexity-1" name="complexity" type="radio" value="2">
+                <label for="complexity-1" style="margin-right:5px;">2</label>
+
+           <input id="complexity-2" name="complexity" type="radio" value="3">
+                <label for="complexity-2" style="margin-right:5px;">3</label>
+
+            <input id="complexity-3" name="complexity" type="radio" value="4">
+                <label for="complexity-3" style="margin-right:5px;">4</label>
+
+            <input id="complexity-4" name="complexity" type="radio" value="5">
+                <label for="complexity-4" style="margin-right:5px;">5</label>
+            </p>
+            <input placeholder="Введите количество заданий:" name="count"
+                   id="count" type="text" class="form-control"><p></p>
+            <input placeholder="Введите задания:" name="task"
+                   id="task" type="text" class="form-control"><p></p>
+            <div align="center">
+                <input type="submit" class="btn btn-lg btn-primary btn-block"
+                       value="Cоздать" style="width:50%;">
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

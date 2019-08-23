@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Fotograff - Просмотр места</title>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <center><h3>{{name}}</h3></center>
+        <div class="row">
+            <div class="col-sm-3">
+                <img class="img-thumbnail" alt="avatar" width="400px"
+                     src={{avatar}}>
+            </div>
+            <div class="col-sm-9">
+                <label>{{text}}</label>
+            </div>
+        <div class="row"  style="margin-top: 15px; margin-bottom: 15px;">
+            <div class="col-sm-6">
+                <div id="map" style="width: 100%; height: 400px"></div>
+            </div>
+        </div>
+            <div class="col-xs-6">
+                <div class="row" method="post" style="width: 50%; margin-top: 5%; margin-left: 5%; margin-bottom: 5%; float: center;">
+                    <form onsubmit="CommentEvent({{ id }}, &#34;{{ user }}&#34;); return false;">
+                    {{ form.hidden_tag() }}
+                    <div class="row">{{ form.body(cols="50", rows="5") }}</div>
+                    <div class="row"><input type=submit class="warning button" value="Комментировать">
+                        <input type=submit class="warning button" value="Добавить изображение"></div>
+                    </form>
+                </div>
+            <div class="row" style="width: 50%; margin-top: 5%; margin-left: 5%; margin-bottom: 5%; float: center;">
+                <div class="comments">
+                {% for i in comments_before %}
+                    <div class='row'>
+                    <div class='medium-10 columns'>
+                        <div class='callout secondary'>
+                            <div class='row'>
+                                <div class='medium-12 columns'>
+                                    <a href="/user/{{i[0]}}">  <p class="text-left" style="color: #ffae00">{{i[0]}}</p> </a>
+                                    <p>{{i[1]}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+    </div>
+        </div>
+    </div>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        ymaps.ready(init);
+        var myMap;
+
+        function init(){
+            myMap = new ymaps.Map("map", {
+                center: [55.76, 37.64],
+                zoom: 7
+            });
+        }
+    </script>
+    <div style="text-align: center;">
+        <a class="btn btn-default" href='/api/event/{{id}}/edit'>Редактировать</a>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Fotograff - Изменение квеста пользователя {{ username }}</title>
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="page-header"><center><h1>Данные квеста</h1></center></div>
+    <div class="col-md-4" style="text-align: center;">
+        <img src="{{ url_for('static', filename=fileurl) }}"  style="width: 300px; height:300px;">
+        <br>
+        <label for="FileUpload" class="btn btn-default"  style="width:50%; margin-left:25%; margin-right:25%;">Сменить аватарку</label>
+                <form method=POST enctype=multipart/form-data action="/quests/{{ id }}/change_image" onsubmit="">
+                    {{ form2.hidden_tag() }}
+                    {{ form2.file(id="FileUpload", onchange="this.form.submit();", style="position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0);") }}
+                </form>
+    </div>
+    <div class="col-md-6">
+    <form class="form-signin" action="" method="post" name="edit_quest">
+        {{form.hidden_tag()}}
+            <label>Название квеста:</label><input placeholder="Введите название квеста:" name="nameq"
+                id="nameq" type="text" class="form-control" value="{{ nameq }}"><p></p>
+            <label>Описание квеста:</label><input placeholder="Введите описание квеста:" name="text"
+                id="text" type="text" class="form-control" value="{{ text }}"><p></p>
+            <label>Сложность квеста: {{ complexity }}</label> <p></p>
+            <label>Изменить сложность квеста: </label>
+            <input id="complexity-0" name="complexity" type="radio" value="1" style="margin-left:5px;">
+                <label for="complexity-0" style="margin-right:5px;">1</label>
+            <input id="complexity-1" name="complexity" type="radio" value="2">
+                <label for="complexity-1" style="margin-right:5px;">2</label>
+           <input id="complexity-2" name="complexity" type="radio" value="3">
+                <label for="complexity-2" style="margin-right:5px;">3</label>
+            <input id="complexity-3" name="complexity" type="radio" value="4">
+                <label for="complexity-3" style="margin-right:5px;">4</label>
+            <input id="complexity-4" name="complexity" type="radio" value="5">
+                <label for="complexity-4" style="margin-right:5px;">5</label><p></p>
+            <label>Кол-во заданий:</label><input placeholder="Введите кол-во заданий:" name="count"
+                id="count" type="text" class="form-control" value="{{ count }}"><p></p>
+            <label>Задания:</label><input placeholder="Введите задания:" name="task"
+                   id="task" type="text" class="form-control" value="{{ task }}"><p></p>
+            <input type="submit" class="btn btn-lg btn-primary btn-block"
+           value="Сохранить изменения" style="width:50%; margin-left:25%; margin-right:25%;">
+        </form>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,6 @@
+{
+    "secret_key": "A0Zr98j/3yX R~XHH!jmN]LWX/,?RT",
+    "salt" : "salt",
+    "port" : 5000,
+    "debug": true
+}
