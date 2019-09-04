@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}<title>FotograFF - Вход</title>{% endblock %}
+
+{% block ext_script %}
+<link href="{{ url_for('static', filename='bootstrap/css/signin.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+{% from "_formhelpers.html" import render_field_alter_small %}
+<form action="" method="post" name="register" class="form-signin">
+    {{form.hidden_tag()}}
+    <div class="page-header"><center><h2>Вход на сайт</h2></center></div>
+
+    <div>
+        {{ render_field_alter_small(form.login, placeholder="Ваш логин:", class="form-control") }}
+    </div>
+
+    <div>
+        {{ render_field_alter_small(form.password, placeholder="Ваш пароль:", class="form-control") }}
+    </div>
+
+    <input name="text_password" id="check" value="1" type="checkbox">
+    <label for="check">Запомнить пароль</label>
+
+    <p>
+        <button type="success submit" class="btn btn-lg btn-primary btn-block">Войти</button>
+    </p>
+    <a href="register"><button class="btn btn-lg btn-primary btn-block">Регистрация</button></a>
+</form>
+
+
+{% endblock %}

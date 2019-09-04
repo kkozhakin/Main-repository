@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}<title>FotograFF - Вход</title>{% endblock %}
+
+{% block ext_script %}
+<link href="{{ url_for('static', filename='bootstrap/css/signin.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+{% from "_formhelpers.html" import render_field_alter_small %}
+<form class="form-signin" action="" method="post" name="register">
+    {{form.hidden_tag()}}
+    <div class="page-header"><center><h2>Регистрация</h2></center></div>
+    <input placeholder="Введите логин:" name="username"
+           id="username" type="text" class="form-control"><p></p>
+    <input placeholder="Введите ваш email:" name="email"
+           id="email" type="text" class="form-control"><p></p>
+    <input placeholder="Введите ваш пароль:" name="password"
+           id="password" type="password" class="form-control"><p></p>
+    <input placeholder="Повторите пароль:" name="confirm"
+           id="confirm" type="password" class="form-control"><p></p>
+    <input placeholder="Введите ваше имя:" name="name"
+           id="name" type="text" class="form-control"><p></p>
+    <input placeholder="Введите вашу фамилию:" name="surname"
+           id="surname" type="text" class="form-control"><p></p>
+    <div class="form-signin">{{ render_field_alter_small(form.recaptcha) }}</div>
+    <input type="submit" class="btn btn-lg btn-primary btn-block"
+           value="Зарегистрироваться">
+</form>
+{% endblock %}
+
+
+
+

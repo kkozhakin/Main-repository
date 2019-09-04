@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Fotograff - help</title>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row columns">
+        <h1 class="text-center">Вы здесь впервые?</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p style="color: #e77800; margin-top: 2%;" class="text-center">
+            Мы рады приветствовать Вас на нашем сайте!<br>
+            Мы приготовили несколько подсказок, чтобы Вы узнали о всех возможностях нашего сайта.<br>
+            Итак, начнем!
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12" style="margin-top: 5%">
+            <p style="color: #e77800; margin-top: 2%;" class="text-center">
+                Если Вы хотите добавить свое место, Вам необходимо зарегистрироваться.<br>
+                После того как вы авторизовались, достаточно щелчка правой кнопкой<br>
+                мыши по любой точке на карте.<br>
+            </p>
+        </div>
+        <div class="col-md-12" style="text-align:center;">
+            <a href="#win1"><img src="{{ url_for('static', filename='point_add.png') }}" width="500px" height="300px"></a>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col-md-12" style="margin-top: 7%">
+            <p style="color: #e77800; margin-top: 2%;" class="text-center">
+                Вы можете задать область поиска мест. Для этого необходимо нажать левой кнопкой мыши<br>
+                в любую точку на карте. Появившуюся область можно регулировать, нажав<br>
+                на неё левой кнопкой мыши повторно.
+            </p>
+        </div>
+        <div class="col-md-12" style="text-align:center;">
+            <a href="#win2"><img src="{{ url_for('static', filename='circle.png') }}" width="500px" height="300px"></a>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col-md-12" style="margin-top: 7%">
+            <p style="color: #e77800; margin-top: 2%;" class="text-center">
+                Вы можете узнать подробности места, нажав на метку.
+            </p>
+        </div>
+        <div class="col-md-12" style="text-align:center;">
+            <a href="#win3"><img src="{{ url_for('static', filename='point.png') }}" width="500px" height="300px"></a>
+        </div>
+    </div>
+</div>
+<a href="#x" class="overlay" id="win1"></a>
+        <div class="popup">
+            <a href="{{ url_for('static', filename='point_add.png') }}">
+                <img class="is-image" title="" src="{{ url_for('static', filename='point_add.png') }}" alt="" />
+            </a>
+        </div>
+<a href="#x" class="overlay" id="win2"></a>
+        <div class="popup">
+             <a href="{{ url_for('static', filename='circle.png') }}">
+                 <img class="is-image" title="" src="{{ url_for('static', filename='circle.png') }}" alt="" />
+             </a>
+        </div>
+<a href="#x" class="overlay" id="win3"></a>
+        <div class="popup">
+             <a href="{{ url_for('static', filename='point.png') }}">
+                 <img class="is-image" title="" src="{{ url_for('static', filename='point.png') }}" alt="" />
+             </a>
+        </div>
+{% endblock %}

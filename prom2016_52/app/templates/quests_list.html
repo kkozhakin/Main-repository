@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Список квестов</title>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-10">
+        <h1>Квесты <small>общий список</small></h1>
+    </div>
+    <div class="col-md-2">
+        <a href="quests/add" class="btn btn-default" style="margin: 1%;" id="quest">Добавить квест</a>
+    </div>
+</div>
+
+<div class="row">
+    {% if quests|length == 0 %}
+        <div align="center">
+            Квестов пока нет, нажмите на соответствующую кнопку для добавления нового.
+        </div>
+    {% else %}
+    {% for item in quests %}
+    <div class="col-md-4" style="margin-top: 1%;">
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <h3 class="panel-title"><a href="/quests/{{item.id}}">{{item.nameq}}</a></h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row" style="margin-left:1%">
+                            <div class="form-group">
+                                <label>
+                                    Описание:
+                                </label>
+                                <div class="size">
+                                    {{ item.text }}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Задания:</label>
+                                <div class="size">
+                                    {{item.task}}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    Сложность:
+                                </label>
+                                {{item.complexity}}
+                            </div>
+                            <div class="form-group">
+                                <label>Статус:
+                                </label>
+                                Не участвую
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="{{ url_for('static', filename=item.file) }}" width="175px">
+                    </div>
+                </div>
+                <div class="row">
+                        <label class="btn btn-info" style="margin-left:25%; margin-right: 25%; width:50%;" id="" onclick="javascript:document.location.href='/user/{{username}}/edit'">
+                            Участвовать
+                        </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+</div>
+{% endblock %}

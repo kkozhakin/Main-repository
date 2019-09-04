@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Fotograff - страница пользователя {{ username }}</title>
+{% endblock %}
+
+{% block content %}
+<div class="col-md-12"
+     style="margin-top: 1.2%; margin-left: 1.2%; margin-right: 1.2%;">
+    <div class="col-md-3" id="user_avatar">
+        <img src="{{fileurl}}" style="width: 300px; height:300px;">
+    </div>
+
+    <div class="col-md-9" >
+        <div class="row" style=" margin-left: 5px;">
+            <div class="form-group">
+                <label >Логин: {{ username }}</label>
+            </div>
+            <div class="form-group">
+                <label>
+                    Почта:
+                    <a href="mailto: {{email}} "> {{email}}</a>
+                </label>
+            </div>
+            <div class="form-group">
+                <label>Имя:
+                    {% if name %}{{ name }}{% else %}Не указано{% endif %}
+                </label>
+            </div>
+            <div class="form-group">
+                <label>Фамилия:
+                    {% if surname %}{{ surname }}{% else %}Не указано{% endif %}
+                </label>
+            </div>
+        </div>
+        {% if username == user %}
+        <div class="row">
+            <div class="col-xs">
+                <label class="btn btn-default" style="margin-left:5%; margin-top: 10px;" id="edit"
+                       onclick="javascript:document.location.href='/user/{{username}}/edit'">
+                    Приватные настройки
+                </label>
+                <label class="btn btn-default" style="margin-left:5%; margin-top: 10px;" id="password_edit"
+                       onclick="javascript:document.location.href='/user/{{username}}/password_edit'">
+                    Сменить пароль
+                </label>
+                <label for="FileUpload" class="btn btn-default" style="margin-left:5%; margin-bottom: 0px; margin-top: 10px;">Сменить аватарку</label>
+                <form method=POST enctype=multipart/form-data action="/user/{{username}}/change_avatar" onsubmit="">
+                    {{ form.hidden_tag() }}
+                    {{ form.file(id="FileUpload", onchange="this.form.submit();", style="position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0);") }}
+                </form>
+            </div>
+        </div>
+        {% else %}{% endif %}
+    </div>
+</div>
+{% endblock %}
+</body>

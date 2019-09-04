@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% from "_formhelpers.html" import render_field_alter %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <form class="form-signin" action="" method="post">
+            {{form.hidden_tag()}}
+            <div class="page-header"><center><h1>Изменить место</h1></center></div>
+                <label>Название места:</label><input placeholder="Введите название места:" name="name"
+                    id="name" type="text" class="form-control" value="{{ name }}"><p></p>
+                <label>Город:</label><input placeholder="Введите название города:" name="city"
+                    id="city" type="text" class="form-control" value="{{ city }}"><p></p>
+                <label>Адрес:</label><input placeholder="Введите адрес месте:" name="adr"
+                    id="adr" type="text" class="form-control" value="{{ adr }}"><p></p>
+                <label>Описание:</label><input placeholder="Введите описание места:" name="desc"
+                    id="desc" type="text" class="form-control" value="{{ text }}"><p></p>
+                <input hidden="true" value="{{ id }}"> </input>
+                <input type="submit" class="btn btn-lg btn-primary btn-block" value="Сохранить изменения">
+        </form>
+        <br>
+        {{form.hidden_tag()}}
+        <label for="FileUpload" class="btn btn-lg btn-primary btn-block">Сменить аватарку</label>
+        <form method=POST enctype=multipart/form-data action="./change_image/" onsubmit="">
+            {{ form2.hidden_tag() }}
+            {{ form2.file(id="FileUpload", onchange="this.form.submit();", style="position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0);") }}
+        </form>
+    </div>
+</div>
+
+{% endblock %}

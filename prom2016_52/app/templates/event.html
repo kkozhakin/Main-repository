@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row">
+    <div class="col-md-4">
+        <img src="{{fileurl}}" style="max-height:200px; max-width:200px; width: 100%; height:100%; display: block; margin-left: auto; margin-right: auto;" class="img-thumbnail">
+    </div>
+
+    <div class="col-md-8">
+        <div class="callout secondary">
+            <div class="row">
+                <span style="color: #e77800">Название:</span> {{name}}
+            </div>
+            <div class="row">
+                <span style="color: #e77800">Описание:</span> {{text}}
+            </div>
+            <div class="row">
+                <span style="color: #e77800">Владелец:</span> {{owner}}
+            </div>
+            <div class="row">
+                <span style="color: #e77800">Адрес:</span> {{ adr }}
+            </div>
+            <div class="row">
+                <span style="color: #e77800">Посетили:</span> {% if visit == none %}0{% else %}{{visit}}{%endif%}
+            </div>
+            <div class="row">
+                <div class="small-7 small-centered columns">
+                    <form onsubmit="VisitEvent({{ id }}); return false;">
+                        <input type="submit" class="small expanded button" value="Я пойду!" >
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div align="left">
+                    <lable class="btn btn-default" style="margin-top: 10px;" id="edit" onclick="javascript:document.location.href='/api/event/{{ id }}/edit'">Изменить</lable>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-md-6">
+        <input type="hidden" id="long" value="{{longitude}}">
+        <input type="hidden" id="lat" value="{{latitude}}">
+        <div id="map" style="width: 100%; height:500px;"></div>
+            <script type="text/javascript">
+                ymaps.ready(function(){
+                    small_map_init([$('#lat')[0].value, $('#long')[0].value], 17);
+                });
+            </script>
+    </div>
+    <div class="col-md-6">
+        <div class="row">
+            <h3 style="margin-top: 0px;">Комментарии:</h3>
+        </div>
+        <form onsubmit="CommentEvent({{ id }}, &#34;{{ user }}&#34;); return false;">
+            <div class="row">Введите комментарий:</div>
+            <div class="row">
+                <textarea style="width:100%; overflow:auto" name="body" id="body"></textarea>
+            </div>
+            <div class="row">
+                <input type=submit class="warning button" value="Комментировать">
+            </div>
+        </form>
+        <div class="comments">
+            <div class="row">
+                {% for i in comments_before %}
+                        <!--<div class='medium-10 columns'>
+                            <div class='callout secondary'>
+                                <div class='row'>
+                                    <div class='medium-12 columns'>
+                                        <a href="/user/{{i[0]}}">  <p class="text-left" style="color: #ffae00">{{i[0]}}</p> </a>
+                                        <p>{{ i[1] }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
+                        {% if comments %}
+                            {% for comment in comments %}
+                            <div class='row'>
+                                <a href="/user/{{i[0]}}">  <p class="text-left" style="color: #ffae00">{{i[0]}}</p> </a>
+                                <p>{{ i[1] }}</p>
+                            </div>
+                            {% endfor %}
+                        {% else %}
+                            <div class='row'>
+                                Комментариев пока что - нет. Ты можешь буть первым :)
+                            </div>
+                        {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+

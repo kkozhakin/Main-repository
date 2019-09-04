@@ -1,0 +1,27 @@
+{% macro render_field_alter_small(field) %}
+
+<div class="column row">{{ field(**kwargs)|safe }}</div>
+{% for error in field.errors %}
+    <div class="alert callout small" data-closable>
+    <dl><dd>{{ error }}</dd></dl>
+    </div>
+{% endfor %}
+
+{% endmacro %}
+
+{% macro render_field_alter(field, name, pos_class) %}
+
+<div class ="{{ pos_class }}">
+    <label> {{ name }} </label>
+    <div class="column row">{{ field(**kwargs)|safe }}</div>
+</div>
+<div class="{{ pos_class }}">
+
+      {% for error in field.errors %}
+          <div class="alert callout small" data-closable>
+          <dl><dd>{{ error }}</dd></dl>
+          </div>
+      {% endfor %}
+
+</div>
+{% endmacro %}

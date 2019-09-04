@@ -1,0 +1,55 @@
+<style>
+    .colored {
+        color: #ffae00;
+    }
+</style>
+<div style="width: 350px;">
+    <img src="{{fileurl}}" style="height:100px; display: block; margin-left: auto; margin-right: auto;" class="img-thumbnail"><br>
+    <table class="table table-condensed">
+        <tr>
+            <td><span class="colored"><b>Название:</b></span></td>
+            <td class="text-center"><span>{{ name }}</span></td>
+        </tr>
+        <tr>
+            <td><span class="colored"><b>Описание:</b></span></td>
+            <td class="text-center"><span>{{ text }}</span></td>
+        </tr>
+        <tr>
+            <td><span class="colored"><b>Город:</b></span></td>
+            <td class="text-center"><span>{{ city }}</span></td>
+        </tr>
+        <tr>
+            <td><span class="colored"><b>Адрес:</b></span></td>
+            <td class="text-center"><span>{{ adr }}</span></td>
+        </tr>
+        <tr>
+            <td><span class="colored"><b>Владелец:</b></span></td>
+            <td class="text-center">
+                <span>
+                    <a href="/user/{{ owner }}">{{ owner }}</a>
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <td><span class="colored"><b>Посетили:</b></span></td>
+            <td class="text-center"><span>{{ visit }}</span></td>
+        </tr>
+    </table>
+
+     <table class="table table-condensed" >
+        <tr>
+            <td class="text-center" style="vertical-align:middle;">
+                <a href="/event/{{id}}/">
+                    <input type="submit" value="Подробнее" style="height: 30px" class="btn-info btn-sm">
+                </a>
+            </td>
+            <td class="text-center" style="vertical-align:middle;">
+                <form onsubmit="VisitEvent({{ id }}); return false;">
+                    <input type="submit" class="btn-success btn-sm" value="Я пойду!" style="height: 30px">
+                </form>
+            </td>
+        </tr>
+    </table>
+
+
+</div>
