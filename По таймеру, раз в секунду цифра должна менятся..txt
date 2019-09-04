@@ -1,0 +1,117 @@
+.include "m32adef.inc"
+;==============================================================================
+.dseg
+;##############################################################################
+.cseg
+						.org $000 RJMP  RESET
+						.org $00E RJMP	COMP1A
+
+;##############################################################################
+RESET:						LDI  	R16,low(RAMEND)
+		   				OUT  	SPL,R16
+						LDI  	R16,high(RAMEND)
+		 				OUT  	SPH,R16
+
+						LDI	R16, 128
+						OUT     DDRB, R16
+						LDI	R16, 0
+						OUT     PORTB, R16
+						LDI	R17, 10					
+
+						LDI		R16, (1<<OCIE1A)
+						OUT		TIMSK, R16
+
+						LDI		R16, high(15625)
+						OUT		OCR1AH, R16
+						LDI		R16, low(15625)
+						OUT		OCR1AL, R16
+
+						LDI		R16, (1<<CS11)|(1<<CS10)
+						OUT		TCCR1B, R16
+
+						SEI
+						RJMP MAIN
+
+LOL:						CPI R17, 0
+						BREQ S0
+						CPI R17, 1
+						BREQ S1
+						CPI R17, 2
+						BREQ S2
+						CPI R17, 3
+						BREQ S3
+						CPI R17, 4
+						BREQ S4
+						CPI R17, 5
+						BREQ S5
+						CPI R17, 6
+						BREQ S6
+						CPI R17, 7
+						BREQ S7
+						CPI R17, 8
+						BREQ S8
+						CPI R17, 9
+						BREQ S9
+
+						S0:
+							LDI R16, 0b00111111
+							OUT PORTB, R16
+							LDI R17, 10
+							JMP SE1
+						S1:
+							LDI R16, 0b00000110
+							OUT PORTB, R16
+							JMP SE1
+						S2:
+							LDI R16, 0b01011011
+							OUT PORTB, R16
+							JMP SE1
+						S3:
+							LDI R16, 0b01001111
+							OUT PORTB, R16
+							JMP SE1
+						S4:
+							LDI R16, 0b01100110
+							OUT PORTB, R16
+							JMP SE1
+						S5:
+							LDI R16, 0b01101101
+							OUT PORTB, R16
+							JMP SE1
+						S6:
+							LDI R16, 0b01111101
+							OUT PORTB, R16
+							JMP SE1
+						S7:
+							LDI R16, 0b00000111
+							OUT PORTB, R16
+							JMP SE1
+						S8:
+							LDI R16, 0b01111111
+							OUT PORTB, R16
+							JMP SE1
+						S9:
+							LDI R16, 0b01101111
+							OUT PORTB, R16
+							JMP SE1
+						SE1: RET
+RESET_EN:
+;==============================================================================
+MAIN:
+
+MAIN_EN:				RJMP	MAIN
+;==============================================================================
+
+COMP1A:						
+						DEC		R17
+						RCALL           LOL
+						OUT		PORTB, R16
+
+						LDI		R16, 0
+						OUT		TCNT1H, R16
+						OUT		TCNT1L, R16
+
+						RETI
+
+;##############################################################################
+.eseg
