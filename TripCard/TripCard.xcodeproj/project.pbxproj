@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6DE9139423E8690A00BE110D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE9139323E8690A00BE110D /* AppDelegate.swift */; };
+		6DE9139623E8690A00BE110D /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE9139523E8690A00BE110D /* TripViewController.swift */; };
+		6DE9139923E8690B00BE110D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DE9139723E8690A00BE110D /* Main.storyboard */; };
+		6DE9139B23E8691D00BE110D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DE9139A23E8691D00BE110D /* Assets.xcassets */; };
+		6DE9139E23E8691D00BE110D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DE9139C23E8691D00BE110D /* LaunchScreen.storyboard */; };
+		FAD9F63724126AFC00AFFCEB /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD9F63624126AFC00AFFCEB /* Stickers.xcassets */; };
+		FAD9F63B24126AFC00AFFCEB /* CuteSticker.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FAD9F63424126AF900AFFCEB /* CuteSticker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FAD9F6412412739400AFFCEB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD9F6402412739400AFFCEB /* Parse.framework */; };
+		FAD9F644241274CD00AFFCEB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD9F643241274CD00AFFCEB /* AudioToolbox.framework */; };
+		FAD9F646241274D500AFFCEB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD9F645241274D500AFFCEB /* CFNetwork.framework */; };
+		FAD9F648241274DF00AFFCEB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD9F647241274DF00AFFCEB /* CoreGraphics.framework */; };
+		FAD9F64A241274EA00AFFCEB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD9F649241274EA00AFFCEB /* CoreLocation.framework */; };
+		FAD9F64C241274F300AFFCEB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD9F64B241274F300AFFCEB /* MobileCoreServices.framework */; };
+		FAD9F64E241274FB00AFFCEB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD9F64D241274FB00AFFCEB /* QuartzCore.framework */; };
+		FAD9F6502412750800AFFCEB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD9F64F2412750800AFFCEB /* Security.framework */; };
+		FAD9F6522412750F00AFFCEB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD9F6512412750F00AFFCEB /* StoreKit.framework */; };
+		FAD9F6542412752000AFFCEB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD9F6532412752000AFFCEB /* SystemConfiguration.framework */; };
+		FAD9F6562412752C00AFFCEB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD9F6552412752C00AFFCEB /* libz.tbd */; };
+		FAD9F6582412753900AFFCEB /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD9F6572412753900AFFCEB /* libsqlite3.tbd */; };
+		FAD9F65A24127CAD00AFFCEB /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD9F65924127CAC00AFFCEB /* Bolts.framework */; };
+		FAE02E932407C90400E3C161 /* TripCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE02E922407C90400E3C161 /* TripCollectionViewCell.swift */; };
+		FAE02E952407CB1500E3C161 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE02E942407CB1500E3C161 /* Trip.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FAD9F63924126AFC00AFFCEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DE9138823E8690A00BE110D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAD9F63324126AF900AFFCEB;
+			remoteInfo = CuteSticker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FAD9F63C24126AFC00AFFCEB /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FAD9F63B24126AFC00AFFCEB /* CuteSticker.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6DE9139023E8690A00BE110D /* TripCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DE9139323E8690A00BE110D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6DE9139523E8690A00BE110D /* TripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
+		6DE9139823E8690A00BE110D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6DE9139A23E8691D00BE110D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6DE9139D23E8691D00BE110D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6DE9139F23E8691D00BE110D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAD9F63424126AF900AFFCEB /* CuteSticker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CuteSticker.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAD9F63624126AFC00AFFCEB /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
+		FAD9F63824126AFC00AFFCEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAD9F6402412739400AFFCEB /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		FAD9F643241274CD00AFFCEB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		FAD9F645241274D500AFFCEB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		FAD9F647241274DF00AFFCEB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FAD9F649241274EA00AFFCEB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FAD9F64B241274F300AFFCEB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		FAD9F64D241274FB00AFFCEB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FAD9F64F2412750800AFFCEB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FAD9F6512412750F00AFFCEB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		FAD9F6532412752000AFFCEB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		FAD9F6552412752C00AFFCEB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		FAD9F6572412753900AFFCEB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		FAD9F65924127CAC00AFFCEB /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		FAE02E922407C90400E3C161 /* TripCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCollectionViewCell.swift; sourceTree = "<group>"; };
+		FAE02E942407CB1500E3C161 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6DE9138D23E8690A00BE110D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAD9F6582412753900AFFCEB /* libsqlite3.tbd in Frameworks */,
+				FAD9F6562412752C00AFFCEB /* libz.tbd in Frameworks */,
+				FAD9F6542412752000AFFCEB /* SystemConfiguration.framework in Frameworks */,
+				FAD9F6522412750F00AFFCEB /* StoreKit.framework in Frameworks */,
+				FAD9F6502412750800AFFCEB /* Security.framework in Frameworks */,
+				FAD9F64E241274FB00AFFCEB /* QuartzCore.framework in Frameworks */,
+				FAD9F64C241274F300AFFCEB /* MobileCoreServices.framework in Frameworks */,
+				FAD9F65A24127CAD00AFFCEB /* Bolts.framework in Frameworks */,
+				FAD9F64A241274EA00AFFCEB /* CoreLocation.framework in Frameworks */,
+				FAD9F648241274DF00AFFCEB /* CoreGraphics.framework in Frameworks */,
+				FAD9F646241274D500AFFCEB /* CFNetwork.framework in Frameworks */,
+				FAD9F644241274CD00AFFCEB /* AudioToolbox.framework in Frameworks */,
+				FAD9F6412412739400AFFCEB /* Parse.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6DE9138723E8690A00BE110D = {
+			isa = PBXGroup;
+			children = (
+				6DE9139223E8690A00BE110D /* TripCard */,
+				FAD9F63524126AF900AFFCEB /* CuteSticker */,
+				6DE9139123E8690A00BE110D /* Products */,
+				FAD9F642241274CD00AFFCEB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6DE9139123E8690A00BE110D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6DE9139023E8690A00BE110D /* TripCard.app */,
+				FAD9F63424126AF900AFFCEB /* CuteSticker.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6DE9139223E8690A00BE110D /* TripCard */ = {
+			isa = PBXGroup;
+			children = (
+				FAE02E942407CB1500E3C161 /* Trip.swift */,
+				FAE02E922407C90400E3C161 /* TripCollectionViewCell.swift */,
+				6DE9139323E8690A00BE110D /* AppDelegate.swift */,
+				6DE9139523E8690A00BE110D /* TripViewController.swift */,
+				6DE9139723E8690A00BE110D /* Main.storyboard */,
+				6DE9139A23E8691D00BE110D /* Assets.xcassets */,
+				6DE9139C23E8691D00BE110D /* LaunchScreen.storyboard */,
+				6DE9139F23E8691D00BE110D /* Info.plist */,
+			);
+			path = TripCard;
+			sourceTree = "<group>";
+		};
+		FAD9F63524126AF900AFFCEB /* CuteSticker */ = {
+			isa = PBXGroup;
+			children = (
+				FAD9F63624126AFC00AFFCEB /* Stickers.xcassets */,
+				FAD9F63824126AFC00AFFCEB /* Info.plist */,
+			);
+			path = CuteSticker;
+			sourceTree = "<group>";
+		};
+		FAD9F642241274CD00AFFCEB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAD9F65924127CAC00AFFCEB /* Bolts.framework */,
+				FAD9F6402412739400AFFCEB /* Parse.framework */,
+				FAD9F6572412753900AFFCEB /* libsqlite3.tbd */,
+				FAD9F6552412752C00AFFCEB /* libz.tbd */,
+				FAD9F6532412752000AFFCEB /* SystemConfiguration.framework */,
+				FAD9F6512412750F00AFFCEB /* StoreKit.framework */,
+				FAD9F64F2412750800AFFCEB /* Security.framework */,
+				FAD9F64D241274FB00AFFCEB /* QuartzCore.framework */,
+				FAD9F64B241274F300AFFCEB /* MobileCoreServices.framework */,
+				FAD9F649241274EA00AFFCEB /* CoreLocation.framework */,
+				FAD9F647241274DF00AFFCEB /* CoreGraphics.framework */,
+				FAD9F645241274D500AFFCEB /* CFNetwork.framework */,
+				FAD9F643241274CD00AFFCEB /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6DE9138F23E8690A00BE110D /* TripCard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DE913B823E8691E00BE110D /* Build configuration list for PBXNativeTarget "TripCard" */;
+			buildPhases = (
+				6DE9138C23E8690A00BE110D /* Sources */,
+				6DE9138D23E8690A00BE110D /* Frameworks */,
+				6DE9138E23E8690A00BE110D /* Resources */,
+				FAD9F63C24126AFC00AFFCEB /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAD9F63A24126AFC00AFFCEB /* PBXTargetDependency */,
+			);
+			name = TripCard;
+			productName = TripCard;
+			productReference = 6DE9139023E8690A00BE110D /* TripCard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FAD9F63324126AF900AFFCEB /* CuteSticker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAD9F63F24126AFC00AFFCEB /* Build configuration list for PBXNativeTarget "CuteSticker" */;
+			buildPhases = (
+				FAD9F63224126AF900AFFCEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CuteSticker;
+			productName = CuteSticker;
+			productReference = FAD9F63424126AF900AFFCEB /* CuteSticker.appex */;
+			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6DE9138823E8690A00BE110D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Kirill Kozhakin";
+				TargetAttributes = {
+					6DE9138F23E8690A00BE110D = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1130;
+					};
+					FAD9F63324126AF900AFFCEB = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 6DE9138B23E8690A00BE110D /* Build configuration list for PBXProject "TripCard" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6DE9138723E8690A00BE110D;
+			productRefGroup = 6DE9139123E8690A00BE110D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6DE9138F23E8690A00BE110D /* TripCard */,
+				FAD9F63324126AF900AFFCEB /* CuteSticker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6DE9138E23E8690A00BE110D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DE9139E23E8691D00BE110D /* LaunchScreen.storyboard in Resources */,
+				6DE9139B23E8691D00BE110D /* Assets.xcassets in Resources */,
+				6DE9139923E8690B00BE110D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAD9F63224126AF900AFFCEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAD9F63724126AFC00AFFCEB /* Stickers.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6DE9138C23E8690A00BE110D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAE02E952407CB1500E3C161 /* Trip.swift in Sources */,
+				6DE9139623E8690A00BE110D /* TripViewController.swift in Sources */,
+				6DE9139423E8690A00BE110D /* AppDelegate.swift in Sources */,
+				FAE02E932407C90400E3C161 /* TripCollectionViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FAD9F63A24126AFC00AFFCEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAD9F63324126AF900AFFCEB /* CuteSticker */;
+			targetProxy = FAD9F63924126AFC00AFFCEB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6DE9139723E8690A00BE110D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DE9139823E8690A00BE110D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6DE9139C23E8691D00BE110D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DE9139D23E8691D00BE110D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6DE913B623E8691E00BE110D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6DE913B723E8691E00BE110D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6DE913B923E8691E00BE110D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = TripCard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.KOZHAKIN.TripCard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6DE913BA23E8691E00BE110D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = TripCard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.KOZHAKIN.TripCard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FAD9F63D24126AFC00AFFCEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CuteSticker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.KOZHAKIN.TripCard.CuteSticker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FAD9F63E24126AFC00AFFCEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CuteSticker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.KOZHAKIN.TripCard.CuteSticker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6DE9138B23E8690A00BE110D /* Build configuration list for PBXProject "TripCard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DE913B623E8691E00BE110D /* Debug */,
+				6DE913B723E8691E00BE110D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6DE913B823E8691E00BE110D /* Build configuration list for PBXNativeTarget "TripCard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DE913B923E8691E00BE110D /* Debug */,
+				6DE913BA23E8691E00BE110D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAD9F63F24126AFC00AFFCEB /* Build configuration list for PBXNativeTarget "CuteSticker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAD9F63D24126AFC00AFFCEB /* Debug */,
+				FAD9F63E24126AFC00AFFCEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6DE9138823E8690A00BE110D /* Project object */;
+}

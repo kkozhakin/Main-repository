@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BlurApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M2L-mh-MHI">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="90r-w6-Nsm">
+                                <rect key="frame" x="40" y="164" width="334" height="199"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="90r-w6-Nsm" secondAttribute="bottom" constant="499" id="0Dm-z4-GSq"/>
+                            <constraint firstItem="M2L-mh-MHI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7TS-Vt-PgW"/>
+                            <constraint firstItem="90r-w6-Nsm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="AGC-P0-zk2"/>
+                            <constraint firstItem="90r-w6-Nsm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="CyS-Bl-CDC"/>
+                            <constraint firstAttribute="bottom" secondItem="M2L-mh-MHI" secondAttribute="bottom" id="KAA-X1-sil"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="90r-w6-Nsm" secondAttribute="trailing" constant="40" id="okZ-xj-x30"/>
+                            <constraint firstItem="M2L-mh-MHI" firstAttribute="centerX" secondItem="90r-w6-Nsm" secondAttribute="centerX" id="ptS-WN-Bi2"/>
+                            <constraint firstItem="M2L-mh-MHI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zBo-IN-LXB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="M2L-mh-MHI" id="g2j-1D-EIu"/>
+                        <outlet property="loginImageView" destination="90r-w6-Nsm" id="sII-g4-RIt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
+        </scene>
+    </scenes>
+</document>
