@@ -1,0 +1,52 @@
+﻿<Window x:Class="PuzzleApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PuzzleApp"
+        mc:Ignorable="d"
+        Title="Сложи свой пазл" Height="450" Width="700" MinHeight="450" MinWidth="700" Background="CadetBlue" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBlock Name="title" Text="СЛОЖИ СВОЙ ПАЗЛ" FontSize="40" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top" Foreground="Yellow">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="20"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock Name="resText" Text="Правильно ли Вы выбрали специальность и будущую профессию?" TextAlignment="Center" TextWrapping="Wrap" FontSize="40" Width="600" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Blue"/>
+        <Label Content="© Кожакин Кирилл, kkozhakin@mail.ru" HorizontalAlignment="Center" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" Opacity="0.2"  >
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-20"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Button Name="Start" FontSize="18" Content="Начать" Width="200" Height="30" Click="Start_Click" VerticalAlignment="Bottom" HorizontalAlignment="Right" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-20" X="-20"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Name="addQuest" FontSize="18" Content="Добавить вопрос" Width="200" Height="30" Click="addQuest_Click" VerticalAlignment="Bottom" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-20" X="20"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+    </Grid>
+</Window>

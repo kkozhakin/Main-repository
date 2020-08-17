@@ -3,7 +3,6 @@
 //
 
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Windows;
 using System.Windows.Media;
@@ -22,7 +21,7 @@ namespace MindFusion.Diagramming.Wpf.Samples.CS.AnnealLayout
             InitializeComponent();
 
             diagram.DefaultShape = Shapes.Ellipse;
-			diagram.Bounds = new Rect(0, 0, 2000, 2000)
+            diagram.Bounds = new Rect(0, 0, 2000, 2000);
 
             try
             {

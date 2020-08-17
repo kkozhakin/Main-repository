@@ -1,0 +1,192 @@
+﻿<Window x:Class="Materialoved.AddQuestion"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Materialoved"
+        mc:Ignorable="d"
+        Title="Вопрос 1" Height="400" Width="750" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Closing="Window_Closing">
+    <Grid>
+        <Button Name="Add" Content="Добавить" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="20" RenderTransformOrigin="0.5,0.5" Width="120" Height="50" Click="Add_Click" >
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="100" Y="-20"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Name="Change" Content="Изменить" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="20" RenderTransformOrigin="0.5,0.5" Width="120" Height="50" Click="Change_Click" >
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="100" Y="-20"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Name="Cancel" Content="Отменить" VerticalAlignment="Bottom" HorizontalAlignment="Right" RenderTransformOrigin="0.5,0.5" FontSize="20" Width="120" Height="50" Click="Cancel_Click" >
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-100" Y="-20"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Label Content="Введите вопрос:" VerticalAlignment="Top" FontSize="20" HorizontalContentAlignment="Center"/>
+        <Label Content="Введите варианты ответа" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" RenderTransformOrigin="0.5,0.5" >
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="120" Y="-100"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="Корректный ответ" HorizontalAlignment="Right" FontSize="20" VerticalAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" >
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-70" Y="-100"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <TextBox Name="question" Text="новый вопрос" VerticalAlignment="Top" FontSize="20" HorizontalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" >
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="40"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox Name="answer_1" Text="Ответ 1" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" HorizontalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Width="150" >
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-28" X="50"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox Name="answer_2" Text="Ответ 2" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" HorizontalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Width="150" >
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="280" Y="-28"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox Name="answer_3" Text="Ответ 3" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" HorizontalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Width="150" >
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="50" Y="32"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox Name="answer_4" Text="Ответ 4" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" HorizontalContentAlignment="Center" Width="150" RenderTransformOrigin="0.5,0.5" >
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="32" X="280"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Label Content="a)" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" HorizontalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" >
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="20" Y="-30"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="b)" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" HorizontalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" >
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-30" X="250"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="c)" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" HorizontalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" >
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="20" Y="30"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="d)" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" HorizontalContentAlignment="Center" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="250" Y="30"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <RadioButton Name="correctAnswer_1" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="20" RenderTransformOrigin="0.5,0.5" Content="a)" GroupName="CorrectAnswer" IsChecked="True">
+            <RadioButton.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-202" Y="-50"/>
+                </TransformGroup>
+            </RadioButton.RenderTransform>
+        </RadioButton>
+        <RadioButton Name="correctAnswer_2" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="20" RenderTransformOrigin="0.5,0.5" Content="b)" GroupName="CorrectAnswer">
+            <RadioButton.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-200" Y="-20"/>
+                </TransformGroup>
+            </RadioButton.RenderTransform>
+        </RadioButton>
+        <RadioButton Name="correctAnswer_3" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="20" RenderTransformOrigin="0.5,0.5" Content="c)" GroupName="CorrectAnswer">
+            <RadioButton.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-203" Y="10"/>
+                </TransformGroup>
+            </RadioButton.RenderTransform>
+        </RadioButton>
+        <RadioButton Name="correctAnswer_4" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="20" RenderTransformOrigin="0.5,0.5" Content="d)" GroupName="CorrectAnswer">
+            <RadioButton.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-200" Y="40"/>
+                </TransformGroup>
+            </RadioButton.RenderTransform>
+        </RadioButton>
+    </Grid>
+</Window>
