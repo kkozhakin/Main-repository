@@ -1,2 +1,2 @@
 # Main-repository 
-This repo contains projects divided by programming languages.
+This repo contains my resume and achievements.
